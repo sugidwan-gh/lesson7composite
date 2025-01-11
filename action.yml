@@ -1,5 +1,5 @@
 name: composite
-description: calculator to test composite
+description: caculator to test composite
 
 inputs:
   number1:
