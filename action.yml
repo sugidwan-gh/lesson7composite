@@ -1,0 +1,23 @@
+name: composite
+description: caculator to test composite
+input:
+  number1:
+    required: true
+      default: 0
+  number2:
+    required: true
+      default: 0
+output:
+  result:
+    value: ${{ steps:sum-result.outputs.result }}
+runs:
+  steps:
+  using: composite
+  steps:
+    - shell: bash
+      id: sum-result
+      run: |
+        num1=${{ input.number1 }}
+        num2=${{ input.number2 }}
+        result= $((num2 + num2))
+        echo "result=$result" >> "$GITHUB_OUTPUT"
