@@ -3,10 +3,10 @@ description: caculator to test composite
 input:
   number1:
     required: true
-      default: 0
+    default: 0
   number2:
     required: true
-      default: 0
+    default: 0
 output:
   result:
     value: ${{ steps:sum-result.outputs.result }}
@@ -19,5 +19,5 @@ runs:
       run: |
         num1=${{ input.number1 }}
         num2=${{ input.number2 }}
-        result= $((num2 + num2))
+        result=$((num1 + num2))
         echo "result=$result" >> "$GITHUB_OUTPUT"
