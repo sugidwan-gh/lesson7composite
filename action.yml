@@ -11,7 +11,6 @@ output:
   result:
     value: ${{ steps:sum-result.outputs.result }}
 runs:
-  steps:
   using: composite
   steps:
     - shell: bash
